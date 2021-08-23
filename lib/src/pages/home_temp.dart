@@ -12,28 +12,27 @@ class HomePageTemp extends StatelessWidget {
             children: _crearItemsCorta()));
   }
 
-  List<Widget> _crearItems() {
-    List<Widget> lista = <Widget>[];
-    for (String opt in opciones) {
-      final tempWidget = ListTile(
-        title: Text(opt),
-      );
-      lista..add(tempWidget)..add(Divider());
-    }
-    return lista;
-  }
+  // List<Widget> _crearItems() {
+  //   List<Widget> lista = <Widget>[];
+  //   for (String opt in opciones) {
+  //     final tempWidget = ListTile(
+  //       title: Text(opt),
+  //     );
+  //     lista..add(tempWidget)..add(Divider());
+  //   }
+  //   return lista;
+  // }
 
   List<Widget> _crearItemsCorta() {
     return opciones.map((e) {
       return Column(
         children: [
           ListTile(
-            title: Text(e + '!'),
-            subtitle: Text('Cualquier cosa'),
-            leading: Icon(Icons.account_balance_wallet),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: (){}
-          ),
+              title: Text(e + '!'),
+              subtitle: Text('Cualquier cosa'),
+              leading: Icon(Icons.account_balance_wallet),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: () {}),
           Divider()
         ],
       );
